@@ -1,7 +1,7 @@
 # ACEestFitness-and-Gym
 An automated application that demonstrates core functionalities pertinent to a fitness and gym management system.
 
-## Python installation & local setup
+## Python installation & local setup (for macOS)
 ### Install pyenv
 ```
 brew install pyenv
@@ -38,10 +38,10 @@ source .env/bin/activate
 pip install -r requirements.txt
 ```
 
-## Running & testing the application locally
+## Running the application & unit tests locally
 ### To run the application locally
 ```
-python3 src/ACEest_Fitness.py
+python3 src/app.py
 ```
 
 ### To run unit test cases locally
@@ -54,29 +54,10 @@ python3 src/ACEest_Fitness.py
 rm -rf __pycache__ */__pycache__ .pytest_cache */.pytest_cache
 ```
 
-## GIT Commands
-### To see the status of files
-```
-git status
-```
 
-### To stage all changes, including new files, modifications, and deletions
-```
-git add -A
-```
+## Building and running the application as a Docker image locally
+### Building docker image
+docker build -t ace-est-fitness-and-gym .
 
-### To stage all modifications, including deletions, for tracked files and its subdirectories. It does not stage new, untracked files.
-```
-git add -u
-```
-
-### To stage a specific file
-```
-git add file_name
-```
-
-### To commit the changes
-```
-git commit -m "commit message"
-```
-
+### Running the docker image locally
+docker run -p 5050:5000 ace-est-fitness-and-gym
